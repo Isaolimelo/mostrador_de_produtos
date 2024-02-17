@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;600&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="icon/store.png">
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="index.css">
+    <title>Mostrador de produtos</title>
+</head>
+<body>
+    <div id="cardContainerGlobal">
+        <header>
+            <div id="logo">
+                <h1>Vend'tudo</h1>
+            </div>
+            <div id="headermenu">
+                <img src="icon/store.png" alt="">
+            </div>
+            <div id="user" data-title="Acesse o seu perfil aqui">
+                <img src="icon/user.png" alt="">
+            </div>
+        </header>
+        <div id="banner">
+            <div id="bannercontent" >
+                <h1>Procurando o melhor preço e o melhor prazo?</h1>
+                <h2>Venha para a <strong>Vend'tudo!</strong> aqui temos todos os melhores segmentos do mercado, vestuário, tecnologia e muito mais!</h2>
+                <button>Comprar Agora</button>
+            </div>
+            <div>
+                <img src="img/banner-1.png" alt="">
+            </div>
+        </div>
+        <div id="menus">
+            <div id="mostpopular" data-title="Filtre do mais popular para o menos popular">
+                <img src="icon/heart.png" alt="">
+                <h1>Mais populares</h1>
+            </div>
+            <div id="mostcheap" data-title="Filtre do mais barato para o mais caro">
+                <img src="icon/cheap.png"alt="">
+                <h1>Mais em Conta</h1>
+            </div>
+            <div id="clean">
+                <img src="icon/cleancolor.png" alt="">
+                <h1>Limpar</h1>
+            </div>
+            <div id="search" data-title="Digite algo no campo de pesquisa">
+                <label for="Pesquise aqui" data-count="search">
+                    <input id="searchspace" placeholder="Pesquise aqui" type="search"></input>
+                </label>
+                <img src="icon/search.png">
+            </div>
+        </div>    
+    </div>
+    <section>
+        <div id="cardContainer" class="card-container"></div>
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>
