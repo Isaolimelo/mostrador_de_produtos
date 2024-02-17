@@ -13,6 +13,67 @@ body{
     border-radius: 15px;
 }
 
+.card-skeleton{
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom:20%;
+    animation: zoomIn 1s;
+    & .cardImage{
+        width: 100%;
+        min-height: 150px;
+        animation: skeletonAnimate linear infinite 7s;
+        border-radius: 10px;
+        -webkit-animation: skeletonAnimate linear infinite 6s;
+    }
+    & .subjectCard{
+        width: 100%;
+    }
+    & :where(h1, h2, h3){
+        width: 100%;
+        height: 26px;
+        border-radius: 15px;
+        animation: skeletonAnimate linear infinite 6s;
+        -webkit-animation: skeletonAnimate linear infinite 7s;
+    }
+    & h3{
+        width: 50%;
+    }
+    & #buy{
+        background-color: transparent;
+    }
+    & button{
+        transform: translateY(calc(100% + 6px));
+        animation: skeletonAnimate linear infinite 5s;
+        -webkit-animation: skeletonAnimate linear infinite 8s;
+    }
+    .card-skeleton:hover{
+        display: none;
+    }
+}
+
+@keyframes skeletonAnimate {
+    0%{background-color: #C8D4E250;}
+    10%{background-color: #757c8330;}
+    20%{background-color: #757c8310;}
+    30%{background-color: #C8D4E230;}
+    40%{background-color: #757c8350;}
+    50%{background-color: #C8D4E250;}
+    60%{background-color: #622BD930;}
+    70%{background-color: #C8D4E280;}
+    80%{background-color: #C8D4E250;}
+    90%{background-color: #757c8320;}
+    100%{background-color: #C8D4E290;}
+}
+@-webkit-keyframes skelentonAnimate {
+    0%{background-color: red;}
+    100%{background-color: blue;}
+}
+
 #cardContainerGlobal{
     width: 100%;
     height: 600px;
@@ -165,12 +226,10 @@ section{
 .cardImage{
     width: 250px;
     height: 170px;
-    /* border: 1px solid green; */
     display: flex;
     justify-content: center;    
 }
 .cardImage img{
-    /* border: 1px solid red; */
     height: 170px;
     overflow: hidden;
     object-fit: contain; 

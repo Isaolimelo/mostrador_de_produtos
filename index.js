@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
     fetch('https://fakestoreapi.com/products')
         .then(response => response.json())
         .then(data => {
+            cardContainer.innerHTML = '';
             products = data;
             data.forEach(product => {
                 displayProduct(product);
